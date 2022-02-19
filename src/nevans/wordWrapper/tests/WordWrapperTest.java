@@ -12,9 +12,10 @@ class WordWrapperTest {
 	void testWrapInsertsLineBreaks() {
 		int maxLineLength = 10;
 		String text = "abcdefghijklmnopqrstuvwxyz";
-		String expected ="abcdefghij%nklmnopsqrs%nuvwxyz";
+		String expected ="abcdefghij\nklmnopqrst\nuvwxyz";
 		WordWrapper wordWrap = new WordWrapper();
 		String newWrap = wordWrap.wrap(text, maxLineLength);
+		System.out.println(newWrap);
 		assertEquals(expected, newWrap);
 		
 	}
